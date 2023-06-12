@@ -1,0 +1,360 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.menu {
+    
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/1.jpg);
+}
+
+.bigsun {
+    position: absolute;
+    top: 365px;
+    left: 900px;
+    color: #FFFFFF;
+}
+
+h1 {
+    position: absolute;
+    width: 492px;
+    height: 46px;
+    top: 489px;
+    left: 714px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.search {
+    position: absolute;
+    width: 534px;
+    height: 109px;
+    margin-top: 10px;
+    top: 585px;
+    left: 693px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.enter {
+    position: absolute;
+    padding-top: 37px;
+    padding-left: 21px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+}
+
+.search__icon {
+    position: absolute;
+    left: 470px;
+    top: 30px;
+}
+
+h3 {
+    position: absolute;
+    width: 203px;
+    height: 24px;
+    top: 708px;
+    left: 858px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 14px;
+    letter-spacing: 0.015em;
+    text-decoration-line: underline;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.london {
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/2.jpg);
+}
+
+.tokio {
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/3.jpg);
+}
+
+.miami {
+    width: 1920px;
+    height: 1080px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/4.jpg);
+}
+
+.prognoz {
+    top: 159px;
+    left: 709px;
+    position: relative;
+    width: 502px;
+    height: 761px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.back {
+    position: relative;
+    right: 110px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid gray;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.back:before {
+    position: relative;
+    top: 27px;
+    left: 30px;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid #B0B0B0;
+    border-bottom: 3px solid #B0B0B0;
+    transform: rotate(45deg);
+}
+
+.back__search {
+    position: relative;
+    right: 110px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #B0B0B0;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    margin-top: 20px;
+} 
+
+.back__search:before {
+    position: relative;
+    top: 13px;
+    content: url(icons/search.png);
+}
+
+.weather__picture--chilly {
+    position: absolute;
+    width: 447px;
+    height: 447px;
+    top: 26px;
+    left: 26px;
+    background-image: url(prognoz-images/chilly.jpg);
+    background-position: 50% 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;   
+}
+
+.weather__picture--rainy {
+    position: absolute;
+    width: 447px;
+    height: 447px;
+    top: 26px;
+    left: 26px;
+    background-image: url(prognoz-images/rainy.jpg);
+    background-position: 50% 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;   
+}
+
+.weather__picture--sahara {
+    position: absolute;
+    width: 447px;
+    height: 447px;
+    top: 26px;
+    left: 26px;
+    background-image: url(prognoz-images/sahara.jpg);
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;   
+}
+
+.temperature {
+    position: absolute;
+    width: 153px;
+    height: 155px;
+    top: 121px;
+    left: 147px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 192px;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.temperature::after {
+    position: relative;
+    top: -43px;
+    left: 35px;
+    content: '';
+    display: block;
+    width: 87px;
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.weather__small {
+    position: absolute;
+    top: 270px;
+    left: 200px;
+}
+
+.title {
+    position: relative;
+    top: 300px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 96px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.sub__title {
+    position: absolute;
+    top: 543px;
+    left: 170px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #B0B0B0;
+}
+
+.week {
+    display: flex;
+    position: absolute;
+    top: 614px;
+    left: 63px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+.day {
+    margin-right: 32px;
+}
+
+.calender {
+    margin-bottom: -50px;
+}
+
+.calender--one::after {
+    content: "12";
+    position: relative;
+    top: -46px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.calender--two::after {
+    content: "13";
+    position: relative;
+    top: -46px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.calender--three::after {
+    content: "14";
+    position: relative;
+    top: -46px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.calender--four::after {
+    content: "15";
+    position: relative;
+    top: -46px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.calender--five::after {
+    content: "16";
+    position: relative;
+    top: -46px;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
+
+.weather {
+    margin-bottom: -10px;
+}
+
+.number {
+    display: inline-block;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #323232;
+}
