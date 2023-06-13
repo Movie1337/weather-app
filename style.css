@@ -4,110 +4,96 @@ body {
 }
 
 .menu {
-    
+    display: block;
+    text-align: center;
     width: 1920px;
     height: 1080px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/1.jpg);
 }
 
-.bigsun {
-    position: absolute;
-    top: 365px;
-    left: 900px;
-    color: #FFFFFF;
+.block__menu {
+    padding-top: 347px;
 }
 
-h1 {
-    position: absolute;
-    width: 492px;
-    height: 46px;
-    top: 489px;
-    left: 714px;
+.title__one {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
     line-height: 60px;
-    text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
-.search {
-    position: absolute;
-    width: 534px;
-    height: 109px;
-    margin-top: 10px;
-    top: 585px;
-    left: 693px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
-}
-
 .enter {
-    position: absolute;
-    padding-top: 37px;
+    width: 508px;
+    height: 103px;
     padding-left: 21px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #AAAAAA;
+    border-radius: 10px;
+    margin-bottom: -50px;
 }
 
 .search__icon {
-    position: absolute;
-    left: 470px;
-    top: 30px;
+    position: relative;
+    bottom: 40px;
+    left: 220px;
 }
 
-h3 {
-    position: absolute;
-    width: 203px;
-    height: 24px;
-    top: 708px;
-    left: 858px;
+.title__three {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    margin-top: 14px;
     letter-spacing: 0.015em;
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
+.title__three a {
+    color: #FFFFFF;
+}
+
 .london {
+    display: block;
+    text-align: center;
     width: 1920px;
     height: 1080px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/2.jpg);
 }
 
 .tokio {
+    display: block;
+    text-align: center;
     width: 1920px;
     height: 1080px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/3.jpg);
 }
 
 .miami {
+    display: block;
+    text-align: center;
     width: 1920px;
     height: 1080px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/4.jpg);
 }
 
 .prognoz {
-    top: 159px;
-    left: 709px;
-    position: relative;
+    display: block;
     width: 502px;
     height: 761px;
+    margin-top: 159px;
+    margin-left: 709px;
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
@@ -116,12 +102,14 @@ h3 {
 
 .back {
     position: relative;
-    right: 110px;
+    top: 159px;
+    left: 604px;
     width: 75px;
     height: 75px;
     border: 1px solid gray;
     background-color: #FFFFFF;
     border-radius: 50%;
+    margin-bottom: -155px;
 }
 
 .back:before {
@@ -139,13 +127,13 @@ h3 {
 
 .back__search {
     position: relative;
-    right: 110px;
+    top: 340px;
+    left: 604px;
     width: 75px;
     height: 75px;
     border: 1px solid #B0B0B0;
     background-color: #FFFFFF;
     border-radius: 50%;
-    margin-top: 20px;
 } 
 
 .back__search:before {
@@ -155,11 +143,10 @@ h3 {
 }
 
 .weather__picture--chilly {
-    position: absolute;
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
+    margin-top: 26px;
+    margin-left: 27px;
     background-image: url(prognoz-images/chilly.jpg);
     background-position: 50% 90%;
     background-repeat: no-repeat;
@@ -168,11 +155,10 @@ h3 {
 }
 
 .weather__picture--rainy {
-    position: absolute;
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
+    margin-top: 26px;
+    margin-left: 27px;
     background-image: url(prognoz-images/rainy.jpg);
     background-position: 50% 90%;
     background-repeat: no-repeat;
@@ -181,11 +167,10 @@ h3 {
 }
 
 .weather__picture--sahara {
-    position: absolute;
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
+    margin-top: 26px;
+    margin-left: 27px;
     background-image: url(prognoz-images/sahara.jpg);
     background-position: 50% 70%;
     background-repeat: no-repeat;
@@ -194,89 +179,70 @@ h3 {
 }
 
 .temperature {
-    position: absolute;
     width: 153px;
     height: 155px;
-    top: 121px;
-    left: 147px;
+    padding-top: 121px;
+    padding-left: 147px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 128px;
     line-height: 192px;
-    text-align: center;
-    vertical-align: middle;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .temperature::after {
-    position: relative;
-    top: -43px;
-    left: 35px;
     content: '';
     display: block;
     width: 87px;
+    position: relative;
+    top: -43px;
+    left: 35px;
     border-bottom: 3px solid #FFFFFF;
 }
 
-.weather__small {
-    position: absolute;
-    top: 270px;
-    left: 200px;
-}
-
 .title {
-    position: relative;
-    top: 300px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
     line-height: 96px;
-    text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
+    margin-bottom: -25px;
 }
 
 .sub__title {
-    position: absolute;
-    top: 543px;
-    left: 170px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
     line-height: 48px;
-    text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #B0B0B0;
+    margin-bottom: 5px;
 }
 
 .week {
     display: flex;
-    position: absolute;
-    top: 614px;
-    left: 63px;
-    text-align: center;
-    margin-top: -10px;
-}
-
-.day {
-    margin-right: 32px;
+    justify-content: center;
 }
 
 .calender {
-    margin-bottom: -50px;
+    position: relative;
+    left: 12px;
+    margin-bottom: -10px;
 }
 
 .calender--one::after {
     content: "12";
     position: relative;
-    top: -46px;
+    right: 36px;
+    bottom: 7px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -290,7 +256,8 @@ h3 {
 .calender--two::after {
     content: "13";
     position: relative;
-    top: -46px;
+    right: 36px;
+    bottom: 7px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -304,7 +271,8 @@ h3 {
 .calender--three::after {
     content: "14";
     position: relative;
-    top: -46px;
+    right: 36px;
+    bottom: 7px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -318,7 +286,8 @@ h3 {
 .calender--four::after {
     content: "15";
     position: relative;
-    top: -46px;
+    right: 36px;
+    bottom: 7px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -332,7 +301,8 @@ h3 {
 .calender--five::after {
     content: "16";
     position: relative;
-    top: -46px;
+    right: 36px;
+    bottom: 7px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -343,12 +313,11 @@ h3 {
     color: #323232;
 }
 
-.weather {
-    margin-bottom: -10px;
+.weather__icon {
+    margin-bottom: -5px;
 }
 
 .number {
-    display: inline-block;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
