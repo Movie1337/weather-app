@@ -4,21 +4,6 @@ body {
     text-align: center;
 }
 
-.menu {
-    display: block;
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/1.jpg);
-}
-
-.mainScreen {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-}
-
 .mainScreen__title__one {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
@@ -28,11 +13,6 @@ body {
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
-}
-
-.search {
-    display: flex;
-    justify-content: center;
 }
 
 .enter {
@@ -48,67 +28,99 @@ body {
     text-transform: uppercase;
     color: #AAAAAA;
     border-radius: 10px;
-    margin-bottom: -50px;
 }
 
 .search__icon {
-    justify-content: end;
+    position: relative;
+    bottom: 80px;
+    left: 220px;
+    background: none;
+    border: none;
 }
 
-a {
+.mainScreen__title__three a {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
+    line-height: 10px;
     letter-spacing: 0.015em;
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    height: 1080px;
+    background-image: url(bg-images/1.jpg);
+    background-repeat: no-repeat;
+}
+
+.mainScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1080px;
+    backdrop-filter: blur(5px);
+}
+
 .london {
-    display: block;
-    width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
     height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/2.jpg);
+    background-image: url(bg-images/2.jpg);
+    background-repeat: no-repeat;
 }
 
-.tokio {
-    display: block;
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/3.jpg);
-}
-
-.miami {
-    display: block;
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/4.jpg);
+.cityScreen {
+    backdrop-filter: blur(5px);
 }
 
 .forecast {
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 502px;
     height: 761px;
-    margin-top: 159px;
-    margin-left: 709px;
     background-color: #FFFFFF;
     border: 1px solid #FFFFFF;
     border-radius: 10px;
 }
 
+.tokio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 1080px;
+    background-image: url(bg-images/3.jpg);
+    background-repeat: no-repeat;
+}
+
+.miami {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    height: 1080px;
+    background-image: url(bg-images/4.jpg);
+    background-repeat: no-repeat;
+}
+
 .buttons {
     position: relative;
-    right: 880px;
-    top: 63px;
+    top: 60px;
+    right: 280px;
 }
 
 .button__back {
     position: relative;
-    top: 159px;
-    left: 604px;
     width: 75px;
     height: 75px;
     border: 1px solid gray;
@@ -118,9 +130,9 @@ a {
 }
 
 .button__back:before {
+    content: '';
     position: relative;
     left: 22px;
-    content: '';
     display: block;
     width: 20px;
     height: 20px;
@@ -131,8 +143,8 @@ a {
 
 .button__search {
     position: relative;
-    top: 260px;
-    left: 525px;
+    right: 80px;
+    top: 100px;
     width: 75px;
     height: 75px;
     border: 1px solid #B0B0B0;
@@ -141,6 +153,7 @@ a {
 } 
 
 .button__search:before {
+    content: '';
     position: relative;
     content: url(icons/search.png);
 }
@@ -211,11 +224,10 @@ a {
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
-    line-height: 96px;
+    line-height: 86px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
-    margin-bottom: -25px;
 }
 
 .title__sub {
@@ -223,101 +235,39 @@ a {
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 48px;
+    line-height: 10px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #B0B0B0;
-    margin-bottom: 5px;
+    margin-bottom: 30px;
 }
 
 .week {
     display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
 .calendar {
-    position: relative;
-    left: 12px;
-    margin-bottom: -10px;
+    margin-bottom: -40px;
 }
 
-.calendar--one::after {
-    content: "12";
+.calendar__number {
     position: relative;
-    right: 36px;
-    bottom: 7px;
+    bottom: 43px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    line-height: 48px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
-}
-
-.calendar--two::after {
-    content: "13";
-    position: relative;
-    right: 36px;
-    bottom: 7px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calendar--three::after {
-    content: "14";
-    position: relative;
-    right: 36px;
-    bottom: 7px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calendar--four::after {
-    content: "15";
-    position: relative;
-    right: 36px;
-    bottom: 7px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calendar--five::after {
-    content: "16";
-    position: relative;
-    right: 36px;
-    bottom: 7px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.weather__icon {
-    margin-bottom: -5px;
 }
 
 .number {
