@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Pogoda</title>
 </head>
 <body>
@@ -18,80 +18,81 @@
             <div>
                 <div class="search">
                     <form name="search" method="post">
-                        <input class="enter" type="text" value="enter your city">
+                        <input class="enter" type="text" placeholder="enter your city">
+                        <button type="button" class="search__icon" name="search-icon"><img src="icons/search.png" alt=""></button>
                     </form>
                 </div>
-                <button type="button" class="search__icon" name="search-icon"><img src="icons/search.png" alt=""></button>
             </div>
             <div class="mainScreen__title__three"><a href="#">give me a random one</a></div>
         </div>
     </div>
     <div class="london">
-        <div class="cityScreen"></div>
+        <div class="cityScreen">
             <div class="buttons">
                 <button type="button" class="button__back" name="button-back"></button>
                 <button type="button" class="button__search" name="button-search"></button>
             </div>
-            <div class="forecast">
-                <div class="weather__picture--chilly">
-                    <div class="temperature">10</div>
-                    <div class="weather__small"><img src="icons/smallsun.png" alt=""></div>
+            <div class="weather_card">
+                <div class="weather_card__chilly">
+                    <p class="weather_card__temperature">10</p>
+                    <div class="weather_card__picture"><img src="icons/smallsun.png" alt=""></div>
                 </div>
-                <div class="title">London</div>
-                <div class="title__sub">11. 06. 2023</div>
-                <div class="week">
-                    <div class="day">
-                        <div class="calendar">
+                <div class="weather_card__city_name">London</div>
+                <div class="weather_card__date">11. 06. 2023</div>
+                <div class="weather_card__week">
+                    <div class="weather_card__day">
+                        <div class="weather_card__calendar">
                             <img src="icons/calendar.png" alt="">
-                            <div class="calendar__number">12</div>
+                            <div class="weather_card__calendar__number">12</div>
                         </div>
-                        <div class="weather">
-                            <div class="weather__icon"><img src="icons/rain.png" alt=""></div>
+                        <div class="weather_card__weather">
+                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
                         </div>
-                        <span class="number">8</span>
+                        <span class="weather_card__number">8</span>
                     </div>
-                    <div class="day">
-                        <div class="calendar">
+                    <div class="weather_card__day">
+                        <div class="weather_card__calendar">
                             <img src="icons/calendar.png" alt="">
-                            <div class="calendar__number">13</div>
+                            <div class="weather_card__calendar__number">13</div>
                         </div>
-                        <div class="weather">
-                            <div class="weather__icon"><img src="icons/rain.png" alt=""></div>
+                        <div class="weather_card__weather">
+                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
                         </div>
-                        <span class="number">7</span>
+                        <span class="weather_card__number">7</span>
                     </div>
-                    <div class="day">
-                        <div class="calendar">
+                    <div class="weather_card__day">
+                        <div class="weather_card__calendar">
                             <img src="icons/calendar.png" alt="">
-                            <div class="calendar__number">14</div>
+                            <div class="weather_card__calendar__number">14</div>
                         </div>
-                        <div class="weather">
-                            <div class="weather__icon"><img src="icons/rain.png" alt=""></div>
+                        <div class="weather_card__weather">
+                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
                         </div>
-                        <span class="number">9</span>
+                        <span class="weather_card__number">9</span>
                     </div>
-                    <div class="day">
-                        <div class="calendar">
+                    <div class="weather_card__day">
+                        <div class="weather_card__calendar">
                             <img src="icons/calendar.png" alt="">
-                            <div class="calendar__number">15</div>
+                            <div class="weather_card__calendar__number">15</div>
                         </div>
-                        <div class="weather">
-                            <div class="weather__icon"><img src="icons/rain.png" alt=""></div>
+                        <div class="weather_card__weather">
+                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
                         </div>
-                        <span class="number">11</span>
+                        <span class="weather_card__number">11</span>
                     </div>
-                    <div class="day">
-                        <div class="calendar">
+                    <div class="weather_card__day">
+                        <div class="weather_card__calendar">
                             <img src="icons/calendar.png" alt="">
-                            <div class="calendar__number">16</div>
+                            <div class="weather_card__calendar__number">16</div>
                         </div>
-                        <div class="weather">
-                            <div class="weather__icon"><img src="icons/rain.png" alt=""></div>
+                        <div class="weather_card__weather">
+                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
                         </div>
-                        <span class="number">13</span>
+                        <span class="weather_card__number">13</span>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </body>
 </html>

@@ -2,17 +2,23 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
+    
 }
 
 .mainScreen__title__one {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 60px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
+}
+
+.search {
+    margin-bottom: 15px;
+    margin-right: -60px;
 }
 
 .enter {
@@ -32,8 +38,8 @@ body {
 
 .search__icon {
     position: relative;
-    bottom: 80px;
-    left: 220px;
+    top: 15px;
+    right: 80px;
     background: none;
     border: none;
 }
@@ -54,8 +60,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: auto;
-    height: 1080px;
+    max-width: 100%;
+    max-height: 1080px;
     background-image: url(bg-images/1.jpg);
     background-repeat: no-repeat;
 }
@@ -64,7 +70,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    max-width: 1920px;
     height: 1080px;
+    width: 100%;
     backdrop-filter: blur(5px);
 }
 
@@ -73,17 +82,36 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 1080px;
+    max-width: 100%;
+    max-height: 1080px;
     background-image: url(bg-images/2.jpg);
     background-repeat: no-repeat;
 }
 
 .cityScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    height: 1080px;
+    width: 100%;
     backdrop-filter: blur(5px);
 }
 
-.forecast {
+@media (max-width: 543px) {
+    .enter {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 437px) {
+    .enter {
+        max-width: 300px;
+    }
+}
+
+.weather_card {
     display: flex;
     flex-direction: column;
     width: 502px;
@@ -158,9 +186,9 @@ body {
     content: url(icons/search.png);
 }
 
-.weather__picture--chilly {
-    width: 447px;
-    height: 447px;
+.weather_card__chilly {
+    max-width: 447px;
+    max-height: 447px;
     margin-top: 26px;
     margin-left: 27px;
     background-image: url(forecast-images/chilly.jpg);
@@ -194,22 +222,28 @@ body {
     border-radius: 50%;   
 }
 
-.temperature {
+.weather_card__temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 153px;
     height: 155px;
-    padding-top: 121px;
     padding-left: 147px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 128px;
-    line-height: 192px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
-.temperature::after {
+.weather_card__picture {
+    position: relative;
+    bottom: 150px;
+}
+
+.weather_card__temperature::after {
     content: '';
     display: block;
     width: 87px;
@@ -219,7 +253,7 @@ body {
     border-bottom: 3px solid #FFFFFF;
 }
 
-.title {
+.weather_card__city_name {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -230,7 +264,7 @@ body {
     color: #323232;
 }
 
-.title__sub {
+.weather_card__date {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -242,23 +276,23 @@ body {
     margin-bottom: 30px;
 }
 
-.week {
+.weather_card__week {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
 
-.day {
+.weather_card__day {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.calendar {
+.weather_card__calendar {
     margin-bottom: -40px;
 }
 
-.calendar__number {
+.weather_card__calendar__number {
     position: relative;
     bottom: 43px;
     font-family: 'Reem Kufi Ink';
@@ -270,7 +304,7 @@ body {
     color: #323232;
 }
 
-.number {
+.weather_card__number {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
