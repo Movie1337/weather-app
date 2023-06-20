@@ -2,7 +2,6 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
-    
 }
 
 .mainScreen__title__one {
@@ -10,7 +9,6 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    line-height: 60px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -34,6 +32,11 @@ body {
     text-transform: uppercase;
     color: #AAAAAA;
     border-radius: 10px;
+    border: none;
+}
+
+.enter:focus {
+    outline: none;
 }
 
 .search__icon {
@@ -61,7 +64,7 @@ body {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
-    max-height: 1080px;
+    height: 100vh;
     background-image: url(bg-images/1.jpg);
     background-repeat: no-repeat;
 }
@@ -71,9 +74,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1920px;
-    height: 1080px;
     width: 100%;
+    height: 100vh;
     backdrop-filter: blur(5px);
 }
 
@@ -81,9 +83,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     max-width: 100%;
-    max-height: 1080px;
+    min-height: 1080px;
     background-image: url(bg-images/2.jpg);
     background-repeat: no-repeat;
 }
@@ -93,9 +94,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1920px;
-    height: 1080px;
     width: 100%;
+    min-height: 1080px;
     backdrop-filter: blur(5px);
 }
 
@@ -111,6 +111,60 @@ body {
     }
 }
 
+@media (max-width: 715px) {
+    .weather_card {
+        display: flex;
+        flex-direction: column;
+        max-width: 402px;
+        max-height: 661px;
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+    }
+    .weather_card__chilly {
+        max-width: 347px;
+        max-height: 347px;
+        margin-top: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+        background-image: url(forecast-images/chilly.jpg);
+        background-position: 50% 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;   
+    }
+    .weather_card__temperature::after {
+        content: '';
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 40px;
+        width: 87px;
+        border-bottom: 3px solid #FFFFFF;
+    }
+    .button__back {
+        position: relative;
+        top: 700px;
+        left: 240px;
+        width: 75px;
+        height: 75px;
+        border: 1px solid gray;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+        margin-bottom: -155px;
+    }
+    .button__search {
+        position: relative;
+        left: 310px;
+        top: 600px;
+        width: 75px;
+        height: 75px;
+        border: 1px solid #B0B0B0;
+        background-color: #FFFFFF;
+        border-radius: 50%;
+    } 
+}
+
 .weather_card {
     display: flex;
     flex-direction: column;
@@ -121,12 +175,38 @@ body {
     border-radius: 10px;
 }
 
+.weather_card__chilly {
+    width: 447px;
+    height: 447px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-image: url(forecast-images/chilly.jpg);
+    background-position: 50% 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;   
+}
+
+.weather_card__temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 100px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
 .tokio {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: 1080px;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 1080px;
     background-image: url(bg-images/3.jpg);
     background-repeat: no-repeat;
 }
@@ -134,9 +214,9 @@ body {
 .miami {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: auto;
-    height: 1080px;
+    justify-content: center;
+    max-width: 100%;
+    min-height: 1080px;
     background-image: url(bg-images/4.jpg);
     background-repeat: no-repeat;
 }
@@ -172,7 +252,7 @@ body {
 .button__search {
     position: relative;
     right: 80px;
-    top: 100px;
+    top: 110px;
     width: 75px;
     height: 75px;
     border: 1px solid #B0B0B0;
@@ -186,23 +266,12 @@ body {
     content: url(icons/search.png);
 }
 
-.weather_card__chilly {
-    max-width: 447px;
-    max-height: 447px;
-    margin-top: 26px;
-    margin-left: 27px;
-    background-image: url(forecast-images/chilly.jpg);
-    background-position: 50% 90%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 50%;   
-}
-
 .weather__picture--rainy {
     width: 447px;
     height: 447px;
-    margin-top: 26px;
-    margin-left: 27px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
     background-image: url(forecast-images/rainy.jpg);
     background-position: 50% 90%;
     background-repeat: no-repeat;
@@ -213,43 +282,28 @@ body {
 .weather__picture--sahara {
     width: 447px;
     height: 447px;
-    margin-top: 26px;
-    margin-left: 27px;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
     background-image: url(forecast-images/sahara.jpg);
-    background-position: 50% 70%;
+    background-position: 50% 90%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;   
 }
 
-.weather_card__temperature {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 153px;
-    height: 155px;
-    padding-left: 147px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 128px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
 .weather_card__picture {
     position: relative;
-    bottom: 150px;
+    bottom: 140px;
 }
 
 .weather_card__temperature::after {
     content: '';
-    display: block;
-    width: 87px;
     position: relative;
-    top: -43px;
-    left: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 35px;
+    width: 87px;
     border-bottom: 3px solid #FFFFFF;
 }
 
