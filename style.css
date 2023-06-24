@@ -67,6 +67,7 @@ body {
     height: 100vh;
     background-image: url(bg-images/1.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .mainScreen {
@@ -87,16 +88,7 @@ body {
     min-height: 1080px;
     background-image: url(bg-images/2.jpg);
     background-repeat: no-repeat;
-}
-
-.cityScreen {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    min-height: 1080px;
-    backdrop-filter: blur(5px);
+    background-size: cover;
 }
 
 @media (max-width: 543px) {
@@ -109,6 +101,26 @@ body {
     .enter {
         max-width: 300px;
     }
+}
+
+.cityScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 1080px;
+    backdrop-filter: blur(5px);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
+    position: relative;
+    top: 170px;
+    right: 320px;
 }
 
 @media (max-width: 715px) {
@@ -142,27 +154,26 @@ body {
         width: 87px;
         border-bottom: 3px solid #FFFFFF;
     }
-    .button__back {
-        position: relative;
-        top: 700px;
-        left: 240px;
-        width: 75px;
-        height: 75px;
-        border: 1px solid gray;
-        background-color: #FFFFFF;
-        border-radius: 50%;
-        margin-bottom: -155px;
+    .cityScreen {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        min-height: 1080px;
+        backdrop-filter: blur(5px);
     }
-    .button__search {
-        position: relative;
-        left: 310px;
-        top: 600px;
-        width: 75px;
-        height: 75px;
-        border: 1px solid #B0B0B0;
-        background-color: #FFFFFF;
-        border-radius: 50%;
-    } 
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 220px;
+        position: fixed;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: 10px;
+    }
 }
 
 .weather_card {
@@ -209,6 +220,7 @@ body {
     min-height: 1080px;
     background-image: url(bg-images/3.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .miami {
@@ -219,25 +231,18 @@ body {
     min-height: 1080px;
     background-image: url(bg-images/4.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.buttons {
-    position: relative;
-    top: 60px;
-    right: 280px;
-}
-
-.button__back {
-    position: relative;
+.button {
     width: 75px;
     height: 75px;
     border: 1px solid gray;
     background-color: #FFFFFF;
     border-radius: 50%;
-    margin-bottom: -155px;
 }
 
-.button__back:before {
+.button:nth-child(1):before {
     content: '';
     position: relative;
     left: 22px;
@@ -249,18 +254,7 @@ body {
     transform: rotate(45deg);
 }
 
-.button__search {
-    position: relative;
-    right: 80px;
-    top: 110px;
-    width: 75px;
-    height: 75px;
-    border: 1px solid #B0B0B0;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-} 
-
-.button__search:before {
+.button:nth-child(2):before {
     content: '';
     position: relative;
     content: url(icons/search.png);
