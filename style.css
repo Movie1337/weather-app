@@ -1,122 +1,139 @@
 body {
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
-.menu {
-    
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/1.jpg);
-}
-
-.bigsun {
-    position: absolute;
-    top: 365px;
-    left: 900px;
-    color: #FFFFFF;
-}
-
-h1 {
-    position: absolute;
-    width: 492px;
-    height: 46px;
-    top: 489px;
-    left: 714px;
+.mainScreen__title__one {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 60px;
-    text-align: center;
+    font-size: 30px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
 .search {
-    position: absolute;
-    width: 534px;
-    height: 109px;
-    margin-top: 10px;
-    top: 585px;
-    left: 693px;
-    background-color: #FFFFFF;
-    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-right: -60px;
 }
 
 .enter {
-    position: absolute;
-    padding-top: 37px;
+    width: 508px;
+    height: 103px;
     padding-left: 21px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    text-align: center;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #AAAAAA;
+    border-radius: 10px;
+    border: none;
+}
+
+.enter:focus {
+    outline: none;
 }
 
 .search__icon {
-    position: absolute;
-    left: 470px;
-    top: 30px;
+    position: relative;
+    top: 15px;
+    right: 80px;
+    background: none;
+    border: none;
 }
 
-h3 {
-    position: absolute;
-    width: 203px;
-    height: 24px;
-    top: 708px;
-    left: 858px;
+.mainScreen__title__three a {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
-    line-height: 24px;
-    margin-top: 14px;
+    line-height: 10px;
     letter-spacing: 0.015em;
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(bg-images/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.mainScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+}
+
 .london {
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/2.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(bg-images/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cityScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(5px);
 }
 
 .tokio {
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/3.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(bg-images/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .miami {
-    width: 1920px;
-    height: 1080px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(bg-images/4.jpg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    height: 100vh;
+    background-image: url(bg-images/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.prognoz {
-    top: 159px;
-    left: 709px;
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 170px;
     position: relative;
-    width: 502px;
-    height: 761px;
-    background-color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 10px;
-    text-align: center;
+    top: 170px;
+    right: 320px;
 }
 
-.back {
-    position: relative;
-    right: 110px;
+.button {
     width: 75px;
     height: 75px;
     border: 1px solid gray;
@@ -124,11 +141,10 @@ h3 {
     border-radius: 50%;
 }
 
-.back:before {
-    position: relative;
-    top: 27px;
-    left: 30px;
+.button__back:before {
     content: '';
+    position: relative;
+    left: 22px;
     display: block;
     width: 20px;
     height: 20px;
@@ -137,43 +153,71 @@ h3 {
     transform: rotate(45deg);
 }
 
-.back__search {
+.button__search:before {
+    content: '';
     position: relative;
-    right: 110px;
-    width: 75px;
-    height: 75px;
-    border: 1px solid #B0B0B0;
-    background-color: #FFFFFF;
-    border-radius: 50%;
-    margin-top: 20px;
-} 
-
-.back__search:before {
-    position: relative;
-    top: 13px;
     content: url(icons/search.png);
 }
 
-.weather__picture--chilly {
-    position: absolute;
+.weather_card {
+    display: flex;
+    flex-direction: column;
+    width: 502px;
+    height: 761px;
+    background-color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+}
+
+.weather_card__chilly {
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
-    background-image: url(prognoz-images/chilly.jpg);
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-image: url(forecast-images/chilly.jpg);
     background-position: 50% 90%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;   
 }
 
+.weather_card__temperature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Reem Kufi Ink';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.weather_card__temperature::after {
+    content: '';
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 40px;
+    width: 87px;
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.weather_card__picture {
+    position: relative;
+    bottom: 160px;
+}
+
 .weather__picture--rainy {
-    position: absolute;
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
-    background-image: url(prognoz-images/rainy.jpg);
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-image: url(forecast-images/rainy.jpg);
     background-position: 50% 90%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -181,174 +225,70 @@ h3 {
 }
 
 .weather__picture--sahara {
-    position: absolute;
     width: 447px;
     height: 447px;
-    top: 26px;
-    left: 26px;
-    background-image: url(prognoz-images/sahara.jpg);
-    background-position: 50% 70%;
+    margin-top: 25px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-image: url(forecast-images/sahara.jpg);
+    background-position: 50% 90%;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;   
 }
 
-.temperature {
-    position: absolute;
-    width: 153px;
-    height: 155px;
-    top: 121px;
-    left: 147px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 128px;
-    line-height: 192px;
-    text-align: center;
-    vertical-align: middle;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-}
-
-.temperature::after {
-    position: relative;
-    top: -43px;
-    left: 35px;
-    content: '';
-    display: block;
-    width: 87px;
-    border-bottom: 3px solid #FFFFFF;
-}
-
-.weather__small {
-    position: absolute;
-    top: 270px;
-    left: 200px;
-}
-
-.title {
-    position: relative;
-    top: 300px;
+.weather_card__city_name {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 64px;
-    line-height: 96px;
-    text-align: center;
+    line-height: 86px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
 }
 
-.sub__title {
-    position: absolute;
-    top: 543px;
-    left: 170px;
+.weather_card__date {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 48px;
-    text-align: center;
+    line-height: 10px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #B0B0B0;
+    margin-bottom: 30px;
 }
 
-.week {
+.weather_card__week {
     display: flex;
-    position: absolute;
-    top: 614px;
-    left: 63px;
-    text-align: center;
-    margin-top: -10px;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.day {
-    margin-right: 32px;
+.weather_card__day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.calender {
-    margin-bottom: -50px;
+.weather_card__calendar {
+    margin-bottom: -40px;
 }
 
-.calender--one::after {
-    content: "12";
+.weather_card__calendar__number {
     position: relative;
-    top: -46px;
+    bottom: 43px;
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
     font-size: 28px;
-    line-height: 48px;
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
 }
 
-.calender--two::after {
-    content: "13";
-    position: relative;
-    top: -46px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calender--three::after {
-    content: "14";
-    position: relative;
-    top: -46px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calender--four::after {
-    content: "15";
-    position: relative;
-    top: -46px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.calender--five::after {
-    content: "16";
-    position: relative;
-    top: -46px;
-    font-family: 'Reem Kufi Ink';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 48px;
-    letter-spacing: 0.015em;
-    text-transform: uppercase;
-    color: #323232;
-}
-
-.weather {
-    margin-bottom: -10px;
-}
-
-.number {
-    display: inline-block;
+.weather_card__number {
     font-family: 'Reem Kufi Ink';
     font-style: normal;
     font-weight: 400;
@@ -357,4 +297,88 @@ h3 {
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
+}
+
+@media (max-width: 543px) {
+    .enter {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 437px) {
+    .enter {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 715px) {
+    .weather_card {
+        display: flex;
+        flex-direction: column;
+        max-width: 402px;
+        max-height: 661px;
+        background-color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+    }
+    .weather_card__chilly {
+        max-width: 347px;
+        max-height: 347px;
+        margin-top: 25px;
+        margin-right: 25px;
+        margin-left: 25px;
+        background-image: url(forecast-images/chilly.jpg);
+        background-position: 50% 90%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 50%;   
+    }
+    .weather_card__temperature {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Reem Kufi Ink';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 100px;
+        letter-spacing: 0.015em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+    }
+    
+    .weather_card__temperature::after {
+        content: '';
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        bottom: 35px;
+        width: 87px;
+        border-bottom: 3px solid #FFFFFF;
+    }
+    
+    .weather_card__picture {
+        position: relative;
+        bottom: 135px;
+    }
+    .cityScreen {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-height: 100vh;
+        backdrop-filter: blur(5px);
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        min-width: 220px;
+        position: fixed;
+        top: unset;
+        left: unset;
+        right: unset;
+        bottom: 10px;
+    }
 }
