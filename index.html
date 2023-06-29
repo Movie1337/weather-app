@@ -10,27 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Pogoda</title>
 </head>
-<body>
-    <div class="menu">
+<body id="body">
+    <div id="mainMenu" class="menu">
         <div class="mainScreen">
             <div class="mainScreen__logo"><img src="icons/bigsun.png" alt=""></div>
             <h1 class="mainScreen__title__one">Your forecast app</h1>
             <div>
                 <div class="search">
-                    <form name="search" method="post">
-                        <input class="enter" type="text" placeholder="enter your city">
-                        <button type="button" class="search__icon" name="search-icon"><img src="icons/search.png" alt=""></button>
+                    <form class="form" id="form">
+                        <input id="enter" class="enter" type="text" placeholder="enter your city">
+                        <button id="search" class="search__icon" name="search-icon"><img src="icons/search.png" alt=""></button>
                     </form>
                 </div>
             </div>
-            <div class="mainScreen__title__three"><a href="#">give me a random one</a></div>
+            <div id="random" class="mainScreen__title__three"><a href="#">give me a random one</a></div>
         </div>
     </div>
-    <div class="london">
+    <div id="london" class="london hidden">
         <div class="cityScreen">
             <div class="buttons">
-                <button class="button button__back" name="button-back"></button>
-                <button class="button button__search" name="button-search"></button>
+                <button id="buttonBack" class="button button__back" name="button-back"></button>
+                <button id="buttonSearch" class="button button__search" name="button-search"></button>
             </div>
             <div class="weather_card">
                 <div class="weather_card__chilly">
@@ -94,5 +94,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

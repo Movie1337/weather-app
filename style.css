@@ -299,6 +299,10 @@ body {
     color: #323232;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 543px) {
     .enter {
         max-width: 400px;
