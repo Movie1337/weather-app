@@ -1,9 +1,60 @@
-const search = document.querySelector('#search'); 
-const random = document.querySelector('#random');
-const menu = document.querySelector('#mainMenu');
-const buttonBack = document.querySelector('#buttonBack');
-const buttonSearch = document.querySelector('#buttonSearch');
-const body = document.querySelector('#body');
+const search = document.getElementById("search"); 
+const randomScreen = document.getElementById("random");
+const mainMenu = document.getElementById("mainMenu");
+const screenLondon = document.getElementById("screenLondon");
+const buttonBack = document.getElementById("buttonBack");
+const buttonSearch = document.getElementById("buttonSearch");
+//const body = document.querySelector('#body');
+
+function showScreen(id) {
+    document.querySelector(`#${id}`).classList.remove("hidden");
+}
+
+function hideScreen(id) {
+    document.querySelector(`#${id}`).classList.add("hidden");
+}
+
+const handleClickSearch = (event) => {
+    event.preventDefault();
+    hideScreen("mainMenu");
+    showScreen("screenLondon");
+}
+
+const handleClickBack = (event) => {
+    event.preventDefault();
+    hideScreen("screenLondon");
+    showScreen("mainMenu");
+}
+
+search.addEventListener("click", handleClickSearch);
+randomScreen.addEventListener("click", handleClickSearch);
+buttonBack.addEventListener("click", handleClickBack);
+buttonSearch.addEventListener("click", handleClickBack);
+
+//search.addEventListener("click", showScreen);
+/*
+function hideScreen(id) {
+    document.querySelector(`#${id}`).classList.remove("hidden");
+}
+
+buttonBack.addEventListener("click", hideScreen("mainMenu"));
+
+
+const showScreen = function () {
+    menu.classList.toggle("hidden");
+    screenLondon.classList.toggle("hidden"); 
+}
+
+search.addEventListener("click", showScreen);
+random.addEventListener("click", showScreen);
+
+const hideScreen = function () {
+    screenLondon.classList.toggle("hidden");
+    menu.classList.toggle("hidden");
+}
+
+buttonBack.addEventListener("click", hideScreen);
+buttonSearch.addEventListener("click", hideScreen);
 //показываем нужный город
 const showScreen = function (id) {
     body.innerHTML = `<div id="london" class="london">
@@ -98,7 +149,7 @@ const hideScreen = function (id) {
 //нажатие кнопок back and search
 buttonBack.addEventListener('click', hideScreen);
 buttonSearch.addEventListener('click', hideScreen);
-/* получаем название города 
+//получаем название города 
 const form = document.querySelector('#form');
 const enter = document.querySelector('#enter');
 */
