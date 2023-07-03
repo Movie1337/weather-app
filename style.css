@@ -59,6 +59,15 @@ body {
     color: #FFFFFF;
 }
 
+@keyframes fadeIn {
+    0% { 
+        opacity: 0.5; 
+    }
+    100% { 
+        opacity: 1; 
+    }
+}
+
 .menu {
     display: flex;
     flex-direction: column;
@@ -68,6 +77,8 @@ body {
     background-image: url(bg-images/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5; 
+    animation: fadeIn 1s forwards;
 }
 
 .mainScreen {
@@ -89,6 +100,8 @@ body {
     background-image: url(bg-images/2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 0.5; 
+    animation: fadeIn 1s forwards;
 }
 
 .cityScreen {
@@ -297,6 +310,14 @@ body {
     letter-spacing: 0.015em;
     text-transform: uppercase;
     color: #323232;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
 }
 
 @media (max-width: 543px) {
