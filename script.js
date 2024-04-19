@@ -1,29 +1,26 @@
-const apiKey = '0c1c169b53be4fbb82f81148230408'
-const mainMenu = document.getElementById("mainMenu");
-const search = document.getElementById("search"); 
-const randomScreen = document.getElementById("random");
-const screenLondon = document.getElementById("screenLondon");
+const apiKey = "0c1c169b53be4fbb82f81148230408";
+const mainContainer = document.getElementById("mainContainer");
+const cityContainer = document.getElementById("cityContainer");
 const cityScreen = document.getElementById("cityScreen");
-const buttonBack = document.getElementById("buttonBack");
-const buttonSearch = document.getElementById("buttonSearch");
-const form = document.querySelector('#form');
-const input = document.querySelector('#enter');
+const search = document.getElementById("search");
+const form = document.querySelector("#form");
+const input = document.querySelector("#enter");
 
-//показываем карточку
-function showCard (temp, name, updated, icon) {
-    // разметка для карточки
-        cityScreen.innerHTML = `<div id="buttons" class="buttons">
+// Функция для отображения карточки с погодой
+function showCard(temp, name, updated, icon) {
+  cityScreen.innerHTML = `
+    <div class="buttons">
         <button id="buttonBack" class="button button__back" name="button-back"></button>
         <button id="buttonSearch" class="button button__search" name="button-search"></button>
+    </div>
+    <div class="weather_card">
+        <div class="weather_card__chilly">
+            <p class="weather_card__temperature">${temp}</p>
+            <div class="weather_card__picture"><img src="${icon}" alt="weather icon"></div>
         </div>
-        <div class="weather_card">
-            <div class="weather_card__chilly">
-                <p class="weather_card__temperature">${temp}</p>
-                <div class="weather_card__picture">${icon}</div>
-            </div>
-            <div class="weather_card__city_name">${name}</div>
-            <div class="weather_card__date">${updated}</div>
-            <div class="weather_card__week">
+        <div class="weather_card__city_name">${name}</div>
+        <div class="weather_card__date">${updated}</div>
+        <div class="weather_card__week">
                 <div class="weather_card__day">
                     <div class="weather_card__calendar">
                         <img src="icons/calendar.png" alt="">
@@ -75,72 +72,62 @@ function showCard (temp, name, updated, icon) {
                     <span class="weather_card__number">13</span>
                 </div>
             </div>
-        </div>`;
+    </div>`;
 }
 
-//получаем данные с сервера
+// Функция для получения данных о погоде
 async function getWeather(city) {
-    // адрес запроса
-    const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-    const response = await fetch(url);
-    const data = await response.json();
-    console.log(data);
-    return data;
+  const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data;
 }
 
-//скрывает основной экран 
+// Функции для управления видимостью экранов
 function hideScreen(id) {
-    const element = document.querySelector(`#${id}`);
-    element.classList.add("hidden");
-    setTimeout(() => {
-        element.classList.add("none");
-    }, 2000);
+  const element = document.getElementById(id);
+  element.classList.add("hidden");
+  setTimeout(() => {
+    element.classList.add("none");
+  }, 1000);
 }
 
-//показываем экран города
 function showScreen(id) {
-    const element = document.querySelector(`#${id}`);
+  const element = document.getElementById(id);
+  setTimeout(() => {
+    element.classList.remove("none");
     setTimeout(() => {
-        element.classList.remove("none");
-    }, 2000);
-    setTimeout(() => {
-        element.classList.remove("hidden");
-    }, 2500);
+      element.classList.remove("hidden");
+    }, 500);
+  }, 1000);
 }
 
-//делаем отправку формы
-form.onsubmit = async function (e) {
-    // отменяем отправку формы
-    e.preventDefault();
+// Обработчик отправки формы
+form.onsubmit = async function (event) {
+  event.preventDefault();
+  const city = input.value.trim();
+  const data = await getWeather(city);
+  showCard(
+    data.current.temp_c,
+    data.location.name,
+    data.current.last_updated,
+    data.current.condition.icon
+  );
+  hideScreen("mainContainer");
+  showScreen("cityContainer");
+  console.log(data);
+};
 
-    // берём значение из инпута, обрезаем пробелы
-    let city = input.value.trim();
-    
-    // получаем данные с сервера
-    const data = await getWeather(city);
-
-    showCard(
-        data.current.temp_c,
-        data.location.name,
-        data.current.last_updated,
-        data.current.condition.icon,
-    );
-    
-    const handleClickSearch = (event) => {
-        event.preventDefault();
-        hideScreen("mainMenu");
-        showScreen("screenLondon");
-    }
-    
-    const handleClickBack = (event) => {
-        event.preventDefault();
-        hideScreen("screenLondon");
-        showScreen("mainMenu");
-    }
-    
-    search.addEventListener("click", handleClickSearch);
-    randomScreen.addEventListener("click", handleClickSearch);
-    buttonBack.addEventListener("click", handleClickBack);
-    buttonSearch.addEventListener("click", handleClickBack);
-    
-}
+// Делегирование событий для обработки кликов на динамически добавляемые кнопки
+document.addEventListener("click", function (event) {
+  if (event.target.id === "buttonBack") {
+    hideScreen("cityContainer");
+    showScreen("mainContainer");
+  } else if (
+    event.target.id === "buttonSearch" ||
+    event.target.closest("#search")
+  ) {
+    hideScreen("mainContainer");
+    showScreen("cityContainer");
+  }
+});

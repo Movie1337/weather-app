@@ -1,99 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>Pogoda</title>
-</head>
-<body id="body">
-    <div id="mainMenu" class="menu">
-        <div id = "mainScreen" class="mainScreen">
-            <div class="mainScreen__logo"><img src="icons/bigsun.png" alt=""></div>
-            <h1 class="mainScreen__title__one">Your forecast app</h1>
-            <div>
-                <div class="search">
-                    <form class="form" id="form">
-                        <input id="enter" class="enter" type="text" placeholder="enter your city">
-                        <button id="search" class="search__icon" name="search-icon"><img src="icons/search.png" alt=""></button>
-                    </form>
-                </div>
-            </div>
-            <div id="random" class="mainScreen__title__three"><a href="#">give me a random one</a></div>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>The weather</title>
+  </head>
+  <body id="body">
+    <div id="mainContainer" class="mainContainer">
+      <div id="mainScreen" class="mainScreen">
+        <div class="mainScreen__logo">
+          <img src="icons/bigsun.png" alt="" />
         </div>
+        <h1 class="mainScreen__title__one">Your forecast app</h1>
+        <div>
+          <div class="search">
+            <form class="form" id="form">
+              <input
+                id="enter"
+                class="enter"
+                type="text"
+                placeholder="enter your city"
+              />
+              <button id="search" class="search__icon" name="search-icon">
+                <img src="icons/search.png" alt="search" />
+              </button>
+            </form>
+          </div>
+        </div>
+        <div id="random" class="mainScreen__title__three">
+          <a href="#">give me a random one</a>
+        </div>
+      </div>
     </div>
-    <div id="screenLondon" class="london hidden none">
-        <div id="cityScreen" class="cityScreen">
-            <!-- <div id="buttons" class="buttons">
-                <button id="buttonBack" class="button button__back" name="button-back"></button>
-                <button id="buttonSearch" class="button button__search" name="button-search"></button>
-            </div>
-            <div class="weather_card">
-                <div class="weather_card__chilly">
-                    <p class="weather_card__temperature">10</p>
-                    <div class="weather_card__picture"><img src="icons/smallsun.png" alt=""></div>
-                </div>
-                <div class="weather_card__city_name">London</div>
-                <div class="weather_card__date">11. 06. 2023</div>
-                <div class="weather_card__week">
-                    <div class="weather_card__day">
-                        <div class="weather_card__calendar">
-                            <img src="icons/calendar.png" alt="">
-                            <div class="weather_card__calendar__number">12</div>
-                        </div>
-                        <div class="weather_card__weather">
-                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
-                        </div>
-                        <span class="weather_card__number">8</span>
-                    </div>
-                    <div class="weather_card__day">
-                        <div class="weather_card__calendar">
-                            <img src="icons/calendar.png" alt="">
-                            <div class="weather_card__calendar__number">13</div>
-                        </div>
-                        <div class="weather_card__weather">
-                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
-                        </div>
-                        <span class="weather_card__number">7</span>
-                    </div>
-                    <div class="weather_card__day">
-                        <div class="weather_card__calendar">
-                            <img src="icons/calendar.png" alt="">
-                            <div class="weather_card__calendar__number">14</div>
-                        </div>
-                        <div class="weather_card__weather">
-                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
-                        </div>
-                        <span class="weather_card__number">9</span>
-                    </div>
-                    <div class="weather_card__day">
-                        <div class="weather_card__calendar">
-                            <img src="icons/calendar.png" alt="">
-                            <div class="weather_card__calendar__number">15</div>
-                        </div>
-                        <div class="weather_card__weather">
-                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
-                        </div>
-                        <span class="weather_card__number">11</span>
-                    </div>
-                    <div class="weather_card__day">
-                        <div class="weather_card__calendar">
-                            <img src="icons/calendar.png" alt="">
-                            <div class="weather_card__calendar__number">16</div>
-                        </div>
-                        <div class="weather_card__weather">
-                            <div class="weather_card__weather__icon"><img src="icons/rain.png" alt=""></div>
-                        </div>
-                        <span class="weather_card__number">13</span>
-                    </div>
-                </div>
-            </div> -->
-        </div>
+    <div id="cityContainer" class="cityContainer city hidden none">
+      <div id="cityScreen" class="cityScreen"></div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
